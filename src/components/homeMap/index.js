@@ -35,7 +35,14 @@ export default function HomeMap() {
 					coordinate={{ latitude: car.latitude, longitude: car.longitude }}
 				>
 					<Image
-						style={{ width: 50, height: 50, resizeMode: "contain" }}
+						style={{
+							width: 50,
+							height: 50,
+							resizeMode: "contain",
+							transform: [{
+								rotate: `${car.heading}deg`
+							}],
+						}}
 						source={getImage(car.type)}
 					/>
 				</Marker>
