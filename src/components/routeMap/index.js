@@ -26,6 +26,7 @@ export default function RouteMap() {
 				latitudeDelta: 0.022,
 				longitudeDelta: 0.021,
 			}}
+			showsUserLocation={true}
 		>
 			<MapViewDirections
 				origin={origin}

@@ -5,6 +5,19 @@ import Styles from "./styles";
 import { GooglePlacesAutocomplete } from "react-native-google-places-autocomplete";
 import PlaceRow from "./placeRow";
 
+
+//data
+
+const homePlace = {
+	description: 'Home',
+	geometry: { location: { lat: 48.8152937, lng: 2.4597668 } },
+  };
+  const workPlace = {
+	description: 'Work',
+	geometry: { location: { lat: 48.8496818, lng: 2.2940881 } },
+  };
+//end of data  
+
 export default function DestinationSearch() {
 	const [originPlace, setOriginPlace] = useState(null);
 	const [destinationPlace, setDestinationPlace] = useState(null);
@@ -19,6 +32,8 @@ export default function DestinationSearch() {
 		<SafeAreaView>
 			<View style={Styles.container}>
 				<GooglePlacesAutocomplete
+					//  currentLocation={true}
+					 currentLocationLabel='Current location'
 					enablePoweredByContainer = {false} 
 					placeholder="Where from?"
 					onPress={(data, details = null) => {
@@ -39,6 +54,7 @@ export default function DestinationSearch() {
 					}}
 					renderRow={(data) => <PlaceRow data={data} />}
 					suppressDefaultStyles
+					predefinedPlaces={[homePlace, workPlace]}
 				/>
 
 				<GooglePlacesAutocomplete

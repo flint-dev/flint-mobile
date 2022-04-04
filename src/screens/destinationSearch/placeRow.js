@@ -9,7 +9,11 @@ export default function PlaceRow({ data }) {
 	return (
 		<View style={Styles.row}>
 			<View style={Styles.iconContainer}>
-				<Entypo name="location-pin" size={24} color="black" />
+				{data.description === "Home" ? (
+					<Entypo name="home" size={24} color="black" />
+				) : (
+					<Entypo name="location-pin" size={24} color="black" />
+				)}
 			</View>
 			<Text style={Styles.locationText}>{data.description}</Text>
 		</View>

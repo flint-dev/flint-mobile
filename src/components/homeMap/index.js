@@ -28,6 +28,7 @@ export default function HomeMap() {
 				latitudeDelta: 0.022,
 				longitudeDelta: 0.021,
 			}}
+			showsUserLocation ={true}
 		>
 			{cars.map((car) => (
 				<Marker
