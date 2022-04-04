@@ -7,7 +7,7 @@ import HomeSearch from "../../components/homeSearch";
 export default function Home() {
 	return (
 		<View>
-			<View style={{ height: (Dimensions.get("window").height * 5) / 10 }}>
+			<View style={{ height: (Dimensions.get("window").height * 6) / 10 }}>
 				<HomeMap />
 			</View>
 

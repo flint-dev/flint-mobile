@@ -6,30 +6,25 @@ import Styles from "./styles";
 import { Ionicons } from "@expo/vector-icons";
 
 export default function FlintTypeRow(props) {
-  
-  // console.log(props);
-  const { type } = props;
+	// console.log(props);
+	const { type } = props;
 
-  const getImage =() => {
-    if (type.type === "FlintX") {
-      return require("../../assets/images/FlintX.jpeg");
-    }
+	const getImage = () => {
+		if (type.type === "FlintX") {
+			return require("../../assets/images/FlintX.jpeg");
+		}
 
-    if (type.type === "Comfort") {
-      return require("../../assets/images/Comfort.jpeg");
-    }
-    if (type.type === "FlintXL") {
-      return require("../../assets/images/FlintXL.jpeg");
-    }
-
-  }
+		if (type.type === "Comfort") {
+			return require("../../assets/images/Comfort.jpeg");
+		}
+		if (type.type === "FlintXL") {
+			return require("../../assets/images/FlintXL.jpeg");
+		}
+	};
 	return (
 		<View style={Styles.container}>
 			{/* image */}
-			<Image
-				style={Styles.image}
-				source={getImage()}
-			/>
+			<Image style={Styles.image} source={getImage()} />
 
 			<View style={Styles.middleContainer}>
 				<Text style={Styles.type}>
