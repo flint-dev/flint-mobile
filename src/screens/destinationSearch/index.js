@@ -1,40 +1,42 @@
 import { View, Text, TextInput, SafeAreaView } from "react-native";
 import React, { useState, useEffect } from "react";
 import Styles from "./styles";
+import { useNavigation } from "@react-navigation/native";
 
 import { GooglePlacesAutocomplete } from "react-native-google-places-autocomplete";
 import PlaceRow from "./placeRow";
 
-
 //data
 
 const homePlace = {
-	description: 'Home',
+	description: "Home",
 	geometry: { location: { lat: 48.8152937, lng: 2.4597668 } },
-  };
-  const workPlace = {
-	description: 'Work',
+};
+const workPlace = {
+	description: "Work",
 	geometry: { location: { lat: 48.8496818, lng: 2.2940881 } },
-  };
-//end of data  
+};
+//end of data
 
 export default function DestinationSearch() {
 	const [originPlace, setOriginPlace] = useState(null);
 	const [destinationPlace, setDestinationPlace] = useState(null);
 
+	const navigation = useNavigation();
+
 	useEffect(() => {
 		if (originPlace && destinationPlace) {
-			console.warn("Redirect to results");
+			navigation.navigate("SearchResults");
 		}
-	}, []);
+	}, [originPlace,destinationPlace]);
 
 	return (
 		<SafeAreaView>
 			<View style={Styles.container}>
 				<GooglePlacesAutocomplete
 					//  currentLocation={true}
-					 currentLocationLabel='Current location'
-					enablePoweredByContainer = {false} 
+					currentLocationLabel="Current location"
+					enablePoweredByContainer={false}
 					placeholder="Where from?"
 					onPress={(data, details = null) => {
 						// 'details' is provided when fetchDetails = true
@@ -58,7 +60,7 @@ export default function DestinationSearch() {
 				/>
 
 				<GooglePlacesAutocomplete
-					enablePoweredByContainer ={false}
+					enablePoweredByContainer={false}
 					placeholder="Where to?"
 					onPress={(data, details = null) => {
 						// 'details' is provided when fetchDetails = true
@@ -80,15 +82,14 @@ export default function DestinationSearch() {
 				/>
 
 				{/* circle near origin input */}
-				<View style={Styles.circle}/>
+				<View style={Styles.circle} />
 
 				{/* line between dots */}
-				<View style={Styles.line}/>
+				<View style={Styles.line} />
 
 				{/* square near destination input */}
-				<View style={Styles.square}/>
+				<View style={Styles.square} />
 			</View>
-
 		</SafeAreaView>
 	);
 }
