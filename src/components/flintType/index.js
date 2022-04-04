@@ -13,21 +13,27 @@ export default function FlintTypes() {
 	return (
 		<View>
 			{typeData.map((type) => (
-				<FlintTypeRow type={type} />
+				<FlintTypeRow key={type.id} type={type} />
 			))}
 
-			<Pressable onPress={confirm} style={{
-				width: "100%",
-				margin: 10,
-				padding: 10,
-				backgroundColor: "black",
-				alignItems: "center"
-			}}>
-				<Text style={{
-					color: "white",
-					fontWeight: "bold",
-					
-				}}>Confirm Ride</Text>
+			<Pressable
+				onPress={confirm}
+				style={{
+					width: "100%",
+					margin: 10,
+					padding: 10,
+					backgroundColor: "black",
+					alignItems: "center",
+				}}
+			>
+				<Text
+					style={{
+						color: "white",
+						fontWeight: "bold",
+					}}
+				>
+					Confirm Ride
+				</Text>
 			</Pressable>
 		</View>
 	);
