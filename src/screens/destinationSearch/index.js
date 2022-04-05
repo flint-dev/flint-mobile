@@ -26,9 +26,12 @@ export default function DestinationSearch() {
 
 	useEffect(() => {
 		if (originPlace && destinationPlace) {
-			navigation.navigate("SearchResults");
+			navigation.navigate("SearchResults", {
+				originPlace,
+				destinationPlace,
+			});
 		}
-	}, [originPlace,destinationPlace]);
+	}, [originPlace, destinationPlace]);
 
 	return (
 		<SafeAreaView>
@@ -57,6 +60,7 @@ export default function DestinationSearch() {
 					renderRow={(data) => <PlaceRow data={data} />}
 					suppressDefaultStyles
 					predefinedPlaces={[homePlace, workPlace]}
+					renderDescription={(data) => data.description || data.vicinity}
 				/>
 
 				<GooglePlacesAutocomplete
