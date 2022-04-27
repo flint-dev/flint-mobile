@@ -23,12 +23,12 @@ export default function HomeMap() {
 			style={{ width: "100%", height: "100%" }}
 			provider={PROVIDER_GOOGLE}
 			initialRegion={{
-				latitude: 28.450627,
-				longitude: -16.263045,
+				latitude: 5.6356752,
+				longitude: -0.1868929,
 				latitudeDelta: 0.022,
 				longitudeDelta: 0.021,
 			}}
-			showsUserLocation ={true}
+			showsUserLocation={true}
 		>
 			{cars.map((car) => (
 				<Marker
@@ -40,9 +40,11 @@ export default function HomeMap() {
 							width: 50,
 							height: 50,
 							resizeMode: "contain",
-							transform: [{
-								rotate: `${car.heading}deg`
-							}],
+							transform: [
+								{
+									rotate: `${car.heading}deg`,
+								},
+							],
 						}}
 						source={getImage(car.type)}
 					/>

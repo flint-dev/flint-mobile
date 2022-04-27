@@ -6,6 +6,9 @@ import { useNavigation } from "@react-navigation/native";
 import { GooglePlacesAutocomplete } from "react-native-google-places-autocomplete";
 import PlaceRow from "./placeRow";
 
+import { FontAwesome5 } from "@expo/vector-icons";
+import { MaterialIcons } from '@expo/vector-icons';
+
 //data
 
 const homePlace = {
@@ -56,6 +59,7 @@ export default function DestinationSearch() {
 					query={{
 						key: "AIzaSyA7q0zF_2_rCjVuhRDn52NtkOcM3K7t53k",
 						language: "en",
+						components: "country:gh",
 					}}
 					renderRow={(data) => <PlaceRow data={data} />}
 					suppressDefaultStyles
@@ -80,19 +84,24 @@ export default function DestinationSearch() {
 					query={{
 						key: "AIzaSyA7q0zF_2_rCjVuhRDn52NtkOcM3K7t53k",
 						language: "en",
+						components: "country:gh",
 					}}
 					renderRow={(data) => <PlaceRow data={data} />}
 					suppressDefaultStyles
 				/>
 
 				{/* circle near origin input */}
-				<View style={Styles.circle} />
+				<View style={Styles.circle}>
+					<FontAwesome5 name="dot-circle" size={24} color="orange" />
+				</View>
 
 				{/* line between dots */}
 				<View style={Styles.line} />
 
 				{/* square near destination input */}
-				<View style={Styles.square} />
+				<View style={Styles.square} >
+				<MaterialIcons name="location-pin" size={24} color="orange" />
+				</View>
 			</View>
 		</SafeAreaView>
 	);

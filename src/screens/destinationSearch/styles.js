@@ -3,6 +3,7 @@ const Styles = StyleSheet.create({
 	container: {
 		padding: 10,
 		height: "100%",
+		backgroundColor: "white",
 	},
 	textInput: {
 		height: 50,
@@ -17,7 +18,7 @@ const Styles = StyleSheet.create({
 		marginVertical: 10,
 	},
 	iconContainer: {
-		backgroundColor: "#a2a2a2",
+		backgroundColor: "white",
 		padding: 5,
 		borderRadius: 50,
 		marginRight: 15,
@@ -34,32 +35,33 @@ const Styles = StyleSheet.create({
 	autoCompleteContainer: {
 		position: "absolute",
 		top: 0,
-		left: 10,
+		left: 25,
 		right: 10,
+		marginRight: 10,
 	},
 	circle: {
-		width: 5,
-		height: 5,
+		// width: 5,
+		// height: 5,
 		position: "absolute",
-		top: 29,
-		backgroundColor: "black",
+		top: 18,
+		// backgroundColor: "black",
 		left: 15,
-		borderRadius: 5
+		borderRadius: 5,
 	},
 	line: {
 		width: 1,
-		height: 55,
+		height: 45,
 		position: "absolute",
-		top: 34,
-		backgroundColor: "#c4c4c4",
-		left: 16.5,
+		top: 42,
+		backgroundColor: "black",
+		left: 27,
 	},
 	square: {
-		width: 5,
-		height: 5,
+		// width: 5,
+		// height: 5,
 		position: "absolute",
 		top: 85,
-		backgroundColor: "black",
+		// backgroundColor: "black",
 		left: 15,
 	},
 });

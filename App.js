@@ -21,7 +21,7 @@ export default function App() {
 			}
 
 			let location = await Location.getCurrentPositionAsync({});
-			// setLocation(location);
+			setLocation(location);
 		})();
 	}, []);
 
@@ -30,7 +30,7 @@ export default function App() {
 		text = errorMsg;
 	} else if (location) {
 		text = JSON.stringify(location);
-		//   console.log(location)
+		  console.log(location)
 	}
 
 	return (

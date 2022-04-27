@@ -1,4 +1,4 @@
-import { View, Dimensions } from "react-native";
+import { View, Dimensions, SafeAreaView } from "react-native";
 import React from "react";
 import HomeMap from "../../components/homeMap";
 import Message from "../../components/message";
@@ -6,13 +6,13 @@ import HomeSearch from "../../components/homeSearch";
 
 export default function Home() {
 	return (
-		<View>
+		<SafeAreaView>
+			<HomeSearch />
 			<View style={{ height: (Dimensions.get("window").height * 6) / 10 }}>
 				<HomeMap />
 			</View>
 
 			<Message />
-			<HomeSearch />
-		</View>
+		</SafeAreaView>
 	);
 }
