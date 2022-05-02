@@ -23,8 +23,8 @@ export default function RouteMap({ origin, destination }) {
 			style={{ width: "100%", height: "100%" }}
 			provider={PROVIDER_GOOGLE}
 			initialRegion={{
-				latitude: 5.6356873,
-				longitude: -0.1868955,
+				latitude: originLoc.latitude,
+				longitude: originLoc.longitude,
 				latitudeDelta: 0.022,
 				longitudeDelta: 0.021,
 			}}

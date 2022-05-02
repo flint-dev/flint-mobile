@@ -3,12 +3,14 @@ const Styles = StyleSheet.create({
 	container: {
 		flexDirection: "row",
 		alignItems: "center",
-		padding: 20,
+		padding: 15,
+		backgroundColor: "#ede8e1",
 	},
 	image: {
 		height: 70,
 		width: 80,
 		resizeMode: "contain",
+		borderRadius: 50,
 	},
 	middleContainer: {
 		flex: 1,
@@ -31,7 +33,7 @@ const Styles = StyleSheet.create({
 		fontWeight: "bold",
 		fontSize: 18,
 		marginLeft: 5,
-	}, 
+	},
 });
 
 export default Styles;

@@ -1,4 +1,4 @@
-import { View, Text, Pressable } from "react-native";
+import { View, Text, TouchableOpacity } from "react-native";
 import React from "react";
 
 import Styles from "./styles";
@@ -16,25 +16,30 @@ export default function FlintTypes() {
 				<FlintTypeRow key={type.id} type={type} />
 			))}
 
-			<Pressable
+			<TouchableOpacity
 				onPress={confirm}
 				style={{
-					width: "100%",
+					width: "80%",
 					margin: 10,
 					padding: 10,
-					backgroundColor: "black",
+					backgroundColor: "#eb9534",
 					alignItems: "center",
+					height: 50,
+					alignSelf: "center",
+					borderRadius: 40,
+					justifyContent: "center",
 				}}
 			>
 				<Text
 					style={{
 						color: "white",
 						fontWeight: "bold",
+						fontSize: 22,
 					}}
 				>
 					Confirm Ride
 				</Text>
-			</Pressable>
+			</TouchableOpacity>
 		</View>
 	);
 }
