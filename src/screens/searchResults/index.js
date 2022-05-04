@@ -14,11 +14,11 @@ export default function SearchResults() {
 	// console.log(originPlace, destinationPlace );
 	return (
 		<View style={{ display: "flex", justifyContent: "space-between" }}>
-			<View style={{ height: (Dimensions.get("window").height * 6) / 10 }}>
+			<View style={{ height: "55%" }}>
 				<RouteMap origin={originPlace} destination={destinationPlace} />
 			</View>
 
-			<View style={{ height: (Dimensions.get("window").height * 4) / 10 }}>
+			<View style={{ height: "45%" }}>
 				<FlintTypes typeState={typeState} />
 			</View>
 		</View>

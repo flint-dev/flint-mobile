@@ -8,7 +8,7 @@ export default function Home() {
 	return (
 		<SafeAreaView>
 			<HomeSearch />
-			<View style={{ height: (Dimensions.get("window").height * 6) / 10 }}>
+			<View style={{ height:"64%"}}>
 				<HomeMap />
 			</View>
 

@@ -8,7 +8,7 @@ import {
 export default function CustomDrawer(props) {
 	return (
 		<DrawerContentScrollView {...props}>
-			<View style={{ backgroundColor: "#212121", padding: 15 }}>
+			<View style={{ backgroundColor: "#0c3820", padding: 15 }}>
 				{/* user row */}
 				<View style={{ flexDirection: "row", alignItems: "center" }}>
 					<View

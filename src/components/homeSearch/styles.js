@@ -43,6 +43,7 @@ const Styles = StyleSheet.create({
 	},
 	inputBoxContainer: {
 		backgroundColor: "#b0b0b0b0",
+		height: "19%",
 	},
 });
 

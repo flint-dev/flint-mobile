@@ -34,6 +34,7 @@ export default function FlintTypes({ typeState }) {
 					alignSelf: "center",
 					borderRadius: 40,
 					justifyContent: "center",
+					height: "15%",
 				}}
 			>
 				<Text

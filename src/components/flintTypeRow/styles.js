@@ -7,6 +7,7 @@ const Styles = StyleSheet.create({
 		marginHorizontal: 10,
 		borderRadius: 15,
 		marginTop: 5,
+		height: "25%",
 	},
 	image: {
 		height: 70,
