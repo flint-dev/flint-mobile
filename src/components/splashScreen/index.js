@@ -3,8 +3,17 @@ import React from "react";
 
 export default function SplashScreen() {
 	return (
-		<View>
-			<Text>SplashScreen</Text>
+		<View
+			style={{
+				flex: 1,
+				justifyContent: "center",
+				alignItems: "center",
+				backgroundColor: "#f58d16",
+			}}
+		>
+			<Text style={{ color: "white", fontSize: 66, fontStyle: "italic" }}>
+				Flint!
+			</Text>
 		</View>
 	);
 }
