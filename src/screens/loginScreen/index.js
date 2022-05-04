@@ -1,5 +1,13 @@
-import { View, Text, SafeAreaView } from "react-native";
+import {
+	View,
+	Text,
+	SafeAreaView,
+	TextInput,
+	TouchableOpacity,
+	Pressable,
+} from "react-native";
 import React from "react";
+import Styles from "./styles";
 
 export default function SignIn() {
 	return (
@@ -7,8 +15,7 @@ export default function SignIn() {
 			<View>
 				<Text style={Styles.logo}>Flint!</Text>
 			</View>
-			<TextInput style={Styles.inputContainer} placeholder={"Name"} />
-			<TextInput style={Styles.inputContainer} placeholder={"Email"} />
+
 			<TextInput style={Styles.inputContainer} placeholder={"Phone"} />
 			<View
 				style={[
@@ -26,12 +33,12 @@ export default function SignIn() {
 				</TouchableOpacity>
 			</View>
 			<TouchableOpacity style={Styles.button}>
-				<Text style={{ color: "white", fontSize: 22 }}>Sign Up</Text>
+				<Text style={{ color: "white", fontSize: 22 }}>Sign In</Text>
 			</TouchableOpacity>
 			<Pressable style={{ marginTop: 20 }}>
 				<Text style={{ fontSize: 22, color: "white" }}>
-					Already have an account?{" "}
-					<Text style={{ fontStyle: "italic" }}>Sign in.</Text>
+					Don't have an account?{" "}
+					<Text style={{ fontStyle: "italic" }}>Sign up.</Text>
 				</Text>
 			</Pressable>
 		</SafeAreaView>
