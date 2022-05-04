@@ -1,4 +1,4 @@
-import { View, Text, Image } from "react-native";
+import { View, Text, Image, Pressable } from "react-native";
 import React from "react";
 
 import Styles from "./styles";
@@ -7,7 +7,7 @@ import { Ionicons } from "@expo/vector-icons";
 
 export default function FlintTypeRow(props) {
 	// console.log(props);
-	const { type } = props;
+	const { type, onPress, isSelected } = props;
 
 	const getImage = () => {
 		if (type.type === "FlintX") {
@@ -22,7 +22,13 @@ export default function FlintTypeRow(props) {
 		}
 	};
 	return (
-		<View style={Styles.container}>
+		<Pressable
+			style={[
+				Styles.container,
+				{ backgroundColor: isSelected ? "#eba759" : "white" },
+			]}
+			onPress={onPress}
+		>
 			{/* image */}
 			<Image style={Styles.image} source={getImage()} />
 
@@ -37,6 +43,6 @@ export default function FlintTypeRow(props) {
 				<Ionicons name="pricetag" size={12} color="#42d742" />
 				<Text style={Styles.price}>GHS {type.price}</Text>
 			</View>
-		</View>
+		</Pressable>
 	);
 }

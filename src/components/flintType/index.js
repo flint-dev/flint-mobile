@@ -6,14 +6,20 @@ import FlintTypeRow from "../flintTypeRow";
 
 import typeData from "../../assets/data/types";
 
-export default function FlintTypes() {
+export default function FlintTypes({ typeState }) {
+	const [selectedType, setSelectedType] = typeState;
 	const confirm = () => {
 		console.warn("confirm");
 	};
 	return (
 		<View>
 			{typeData.map((type) => (
-				<FlintTypeRow key={type.id} type={type} />
+				<FlintTypeRow
+					key={type.id}
+					type={type}
+					isSelected={type.type === selectedType}
+					onPress={() => setSelectedType(type.type)}
+				/>
 			))}
 
 			<TouchableOpacity
