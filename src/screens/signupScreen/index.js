@@ -36,7 +36,7 @@ export default function SignUp() {
 			)
 			.then((res) => {
 				setOtp(false);
-				console.log(res);
+				// console.log(res);
 			})
 			.catch((err) => console.log(err));
 	};
@@ -55,10 +55,27 @@ export default function SignUp() {
 				userData
 			)
 			.then((res) => {
-				console.log(res);
+				// console.log(res);
+				storeData(res.data.access_token);
 			})
 			.catch((err) => console.log(err));
 	};
+
+	//storing the access token in async storage
+	const storeData = async (value) => {
+		try {
+			await AsyncStorage.setItem("accessToken", value);
+			navigation.navigate("HomePage");
+		} catch (e) {
+			// saving error
+		}
+	};
+
+	useEffect(() => {
+		setTimeout(() => {
+			setOtp(true);
+		}, 60000);
+	}, []);
 
 	const navigation = useNavigation();
 
@@ -97,7 +114,7 @@ export default function SignUp() {
 					placeholder={"OTP"}
 					onChangeText={(e) => {
 						setOtpValue(e);
-						console.log(e);
+						// console.log(e);
 					}}
 				/>
 				<TouchableOpacity style={Styles.otpContainer} onPress={getOtp}>

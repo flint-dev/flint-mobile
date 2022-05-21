@@ -5,22 +5,22 @@ import { useNavigation } from "@react-navigation/native";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 
 export default function SplashScreen() {
-	// const navigation = useNavigation();
-	// useEffect(() => {
-	// 	const checkUser = async () => {
-	// 		if (await isAuthenticated()) {
-	// 			navigation.navigate("HomePage");
-	// 		} else {
-	// 			navigation.navigate("SignIn");
-	// 		}
-	// 	};
-	// 	checkUser();
-	// }, []);
-	// const isAuthenticated = async () => {
-	// 	// await AsyncStorage.removeItem("token");
-	// 	const token = await AsyncStorage.getItem("token");
-	// 	return !!token;
-	// };
+	const navigation = useNavigation();
+	useEffect(() => {
+		const checkUser = async () => {
+			if (await isAuthenticated()) {
+				navigation.navigate("HomePage");
+			} else {
+				navigation.navigate("SignIn");
+			}
+		};
+		checkUser();
+	}, []);
+	const isAuthenticated = async () => {
+		// await AsyncStorage.removeItem("accessToken");
+		const token = await AsyncStorage.getItem("accessToken");
+		return !!token;
+	};
 
 	return (
 		<View
