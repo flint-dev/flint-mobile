@@ -8,6 +8,7 @@ import {
 } from "react-native";
 import React, { useState, useEffect } from "react";
 import Styles from "./styles";
+import { authenticate } from "../../utils";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import axios from "axios";
 import { useNavigation } from "@react-navigation/native";
@@ -62,8 +63,8 @@ export default function SignIn() {
 	//storing the access token in async storage
 	const storeData = async (value) => {
 		try {
-			await AsyncStorage.setItem("accessToken", value);
-			navigation.navigate("HomePage");
+			await authenticate(value)
+			navigation.navigate("HomePage")
 		} catch (e) {
 			// saving error
 		}
