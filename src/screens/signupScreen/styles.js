@@ -21,12 +21,12 @@ const Styles = StyleSheet.create({
 		marginTop: 10,
 	},
 	otpContainer: {
-		backgroundColor: "#ede5dd",
 		height: "70%",
 		width: "20%",
 		borderRadius: 15,
 		alignItems: "center",
 		justifyContent: "center",
+		borderLeftWidth: 1,
 		// marginVertical: 10,
 	},
 	button: {
