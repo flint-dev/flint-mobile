@@ -5,13 +5,13 @@ import {
 	DrawerItemList,
 } from "@react-navigation/drawer";
 import AsyncStorage from "@react-native-async-storage/async-storage";
-import jwt_decode from "jwt-decode";
 
 export default function CustomDrawer(props) {
-	const [accessToken, setAccessToken] = useState("");
 	const [userName, setUserName] = useState("");
 	const [number, setNumber] = useState("");
 	const [email, setEmail] = useState("");
+
+
 	//getting jwt from async storage
 	const getData = async () => {
 		try {
@@ -19,7 +19,7 @@ export default function CustomDrawer(props) {
 			if (value !== null) {
 				// value previously stored
 				const user = JSON.parse(value);
-				console.log(user);
+				// console.log(user);
 				setUserName(user.sub.name);
 				setNumber(user.sub.phone);
 				setEmail(user.sub.email);

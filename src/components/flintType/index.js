@@ -6,11 +6,9 @@ import FlintTypeRow from "../flintTypeRow";
 
 import typeData from "../../assets/data/types";
 
-export default function FlintTypes({ typeState }) {
+export default function FlintTypes({ typeState, onSubmit }) {
 	const [selectedType, setSelectedType] = typeState;
-	const confirm = () => {
-		console.warn("confirm");
-	};
+
 	return (
 		<View>
 			{typeData.map((type) => (
@@ -23,7 +21,7 @@ export default function FlintTypes({ typeState }) {
 			))}
 
 			<TouchableOpacity
-				onPress={confirm}
+				onPress={onSubmit}
 				style={{
 					width: "80%",
 					margin: 10,

@@ -1,15 +1,8 @@
-import {
-	View,
-	Dimensions,
-	SafeAreaView,
-	ActivityIndicator,
-} from "react-native";
-import React, { useEffect, useState } from "react";
+import { View, SafeAreaView } from "react-native";
+import React from "react";
 import HomeMap from "../../components/homeMap";
 import Message from "../../components/message";
 import HomeSearch from "../../components/homeSearch";
-import AsyncStorage from "@react-native-async-storage/async-storage";
-import jwt_decode from "jwt-decode";
 
 export default function Home() {
 	return (

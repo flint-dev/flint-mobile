@@ -9,7 +9,6 @@ import {
 import React, { useState, useEffect } from "react";
 import Styles from "./styles";
 import { authenticate } from "../../utils";
-import AsyncStorage from "@react-native-async-storage/async-storage";
 import axios from "axios";
 import { useNavigation } from "@react-navigation/native";
 
