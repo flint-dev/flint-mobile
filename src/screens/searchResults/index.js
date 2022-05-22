@@ -62,19 +62,8 @@ export default function SearchResults() {
 		authAxios
 			.post("/order", orderData)
 			.then((res) => {
-				Alert.alert(
-					"Successful",
-					"Your order has been placed successfully, waiting for confirmation from driver",
-					[
-						{
-							text: "Go Home",
-							onPress: () => {
-								navigation.navigate("HomePage");
-							},
-						},
-					]
-				);
-				// console.log(res);
+				navigation.navigate("Order", { id: res.data.id });
+				// console.log(res.data);
 			})
 			.catch((err) => console.log(err));
 	};
