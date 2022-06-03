@@ -1,11 +1,13 @@
 {
   "expo": {
-    "name": "flint",
-    "slug": "flint",
+    "name": "flint-rider",
+    "slug": "flint-rider",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
-  
+    "splash": {
+      "image": "./assets/splash.png"
+    },
     "updates": {
       "fallbackToCacheTimeout": 0
     },
@@ -13,13 +15,15 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.rmartey.flint"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
-      }
+      },
+      "package": "com.rmartey.flint"
     },
     "web": {
       "favicon": "./assets/favicon.png"

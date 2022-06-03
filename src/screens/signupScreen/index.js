@@ -48,7 +48,7 @@ export default function SignUp() {
 			email: email,
 			name: name,
 		};
-		console.log(userData);
+		// console.log(userData);
 		axios
 			.post(
 				"http://flintbackendapi-env.eba-efhp27cu.eu-west-2.elasticbeanstalk.com/riders",
