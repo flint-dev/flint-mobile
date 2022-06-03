@@ -4,16 +4,20 @@
 
 ## Clone the repository and install dependencies
 
+```terminal
 - git clone https://github.com/flint-dev/flint-mobile.git
 - cd flint-mobile
 - yarn
+```
 
 ---
 
 ## Running the app
 
+```react-native
 - run yarn start
 - open Expo Go and scan the generated QR code to open the app on mobile
+```
 
 ---
 
